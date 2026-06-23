@@ -8,6 +8,7 @@ from app.routes.photos import router as photos_router
 from app.routes.search import router as search_router
 from app.routes.map import router as map_router
 from app.routes.navigation import router as navigation_router
+from app.routes.dashboard import router as dashboard_router
 from app.services.auth_service import create_admin_user
 import app.models.models  # noqa: F401
 
@@ -19,6 +20,7 @@ app.include_router(deceased_router)
 app.include_router(photos_router)
 app.include_router(search_router)
 app.include_router(navigation_router)
+app.include_router(dashboard_router)
 app.include_router(map_router)
 
 @app.on_event("startup")
