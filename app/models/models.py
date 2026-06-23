@@ -48,8 +48,12 @@ class Photo(Base):
     __tablename__ = "photos"
 
     id = Column(Integer, primary_key=True, index=True)
-    image_path = Column(String, nullable=False)
+
+    file_name = Column(String, nullable=False)
+    file_path = Column(String, nullable=False)
+
     grave_id = Column(Integer, ForeignKey("graves.id"), nullable=False)
+
     created_at = Column(DateTime, default=datetime.utcnow, nullable=False)
 
     grave = relationship("Grave", back_populates="photos")
