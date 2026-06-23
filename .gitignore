@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+
+cemetery.db
+
+uploads/
+
+.env
